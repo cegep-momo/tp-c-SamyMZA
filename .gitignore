@@ -1,1 +1,4 @@
 build/*
+.devcontainer/devcontainer.json
+.devcontainer/Dockerfile
+.devcontainer/reinstall-cmake.sh
