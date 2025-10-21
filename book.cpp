@@ -23,4 +23,10 @@ string Book ::getBorrowerName() const {return borrowerName;};
 
 // Setters
 
+void Book::setTitle(const string& title) {this->title = title;};
+void Book::setAuthor(const string& author) {this->author = author;};
+void Book::setISBN(const string& isbn) {this-> isbn = isbn;};
+void Book::setAvailability(bool available) {this->isAvailable = available;};
+void Book::setBorrowerName(const string& name) {this->borrowerName = name;};
+
 // Methods
