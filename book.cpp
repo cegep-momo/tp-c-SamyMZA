@@ -7,11 +7,12 @@ using namespace std;
 
 
 //COnstructeur def
-Book::Book() : title("") , author("") , isbn("") {}
+Book::Book() : title("") , author("") , isbn(""), isAvailable(true), borrowerName("") {}
 
 // Constructeur avec param
 
-Book::Book(const string& title,const string& author,const string&isbn) : title(title) , author(author) , isbn(isbn) {}
+Book::Book(const string& title,const string& author,const string&isbn) : title(title) , author(author) , isbn(isbn), isAvailable(true), borrowerName("") {}
+
 
 // Getter
 
