@@ -53,5 +53,21 @@ string Book::toFileFormat() const
 
 void Book::fromFileFormat(const string &line)
 {
-
+   stringstream ss(line);
+   string token;
+   string availbeStr;
+   
+   
+   getline(ss, title, '|');
+   getline(ss, author, '|');
+   getline(ss, isbn, '|');
+   getline(ss, availbeStr, '|');
+   getline(ss, borrowerName, '|');
+   
+   if (availbeStr == "1")
+   {
+      isAvailable = true;
+   }else{
+      isAvailable = false;
+   }
 }
