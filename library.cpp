@@ -204,7 +204,7 @@ void Library::displayALlBookSortByTitle(){
         return a->getTitle() < b-> getTitle();
     });
 
-    cout << "\n=== TOUS LES LIVRES ===\n";
+    cout << "\n=== TOUS LES LIVRES TRIER PAR TITRE ===\n";
     for (size_t i = 0; i < books.size(); ++i) {
         cout << "\nLivre " << (i + 1) << " :\n";
         cout << books[i]->toString() << "\n";
@@ -214,6 +214,7 @@ void Library::displayALlBookSortByTitle(){
 
 
 void Library::displayALlBookSortByAuthor(){
+    
     if (books.empty()) {
         cout << "Aucun livre dans la bibliothèque.\n";
         return;
@@ -223,7 +224,7 @@ void Library::displayALlBookSortByAuthor(){
         return a->getAuthor() < b-> getAuthor();
     });
 
-    cout << "\n=== TOUS LES LIVRES ===\n";
+    cout << "\n=== TOUS LES LIVRES TRIER PAR AUTEUR ===\n";
     for (size_t i = 0; i < books.size(); ++i) {
         cout << "\nLivre " << (i + 1) << " :\n";
         cout << books[i]->toString() << "\n";
