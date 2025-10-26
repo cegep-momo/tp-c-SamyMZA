@@ -152,7 +152,7 @@ void Library::displayAllBooks() {
         cout << "Aucun livre dans la bibliothèque.\n";
         return;
     }
-    
+
     cout << "\n=== TOUS LES LIVRES ===\n";
     for (size_t i = 0; i < books.size(); ++i) {
         cout << "\nLivre " << (i + 1) << " :\n";
@@ -192,6 +192,45 @@ void Library::displayAllUsers() {
         cout << "------------------------------\n";
     }
 }
+
+// Trie
+
+void Library::displayALlBookSortByTitle(){
+    if (books.empty()) {
+        cout << "Aucun livre dans la bibliothèque.\n";
+        return;
+    }
+    sort(books.begin(), books.end(), [](const unique_ptr<Book>& a, const unique_ptr<Book>& b){
+        return a->getTitle() < b-> getTitle();
+    });
+
+    cout << "\n=== TOUS LES LIVRES ===\n";
+    for (size_t i = 0; i < books.size(); ++i) {
+        cout << "\nLivre " << (i + 1) << " :\n";
+        cout << books[i]->toString() << "\n";
+        cout << "-------------------------\n";
+    }
+}
+
+
+void Library::displayALlBookSortByAuthor(){
+    if (books.empty()) {
+        cout << "Aucun livre dans la bibliothèque.\n";
+        return;
+    }
+
+    sort(books.begin(), books.end(), [](const unique_ptr<Book>& a, const unique_ptr<Book>& b){
+        return a->getAuthor() < b-> getAuthor();
+    });
+
+    cout << "\n=== TOUS LES LIVRES ===\n";
+    for (size_t i = 0; i < books.size(); ++i) {
+        cout << "\nLivre " << (i + 1) << " :\n";
+        cout << books[i]->toString() << "\n";
+        cout << "-------------------------\n";
+    }
+}
+
 
 // Statistics
 int Library::getTotalBooks() const { return books.size(); }

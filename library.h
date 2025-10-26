@@ -36,16 +36,22 @@ public:
     // Library operations
     bool checkOutBook(const string& isbn, const string& userId);
     bool returnBook(const string& isbn);
-    
+
     // Display methods
     void displayAllBooks();
     void displayAvailableBooks();
     void displayAllUsers();
+
+    // Nouvelle methode
+    void displayALlBookSortByTitle();
+    void displayALlBookSortByAuthor();
     
     // Statistics
     int getTotalBooks() const;
     int getAvailableBookCount() const;
     int getCheckedOutBookCount() const;
+
+
 };
 
 #endif
